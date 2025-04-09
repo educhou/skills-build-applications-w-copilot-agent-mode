@@ -1,0 +1,224 @@
+/* Enhanced Stunning UI/UX Design */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #4682b4);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Remove the extra logo */
+.app-logo {
+  display: none; /* Hide the absolutely positioned logo */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2e8b57, #4682b4);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background: linear-gradient(135deg, #ff4500, #ffa07a);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2e8b57, #4682b4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Refine navbar logo and text alignment */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increase spacing between logo and text */
+}
+
+.navbar-brand img {
+  height: 40px; /* Adjust logo size */
+  width: auto;
+  object-fit: contain; /* Ensure the logo scales properly */
+}
+
+.navbar-brand span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+  .navbar-brand span {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand img {
+    height: 40px;
+  }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #f0f8ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffa07a;
+  text-decoration: underline;
+}
+
+/* Ensure navbar toggler button is visible and functional */
+.navbar-toggler {
+  z-index: 1001;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #4682b4, #5a9bd4);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Links */
+.App-link {
+  color: #ff4500;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.App-link:hover {
+  color: #ffa07a;
+}
+
+/* Table Styles */
+table {
+  width: 90%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #4682b4;
+  color: white;
+  font-size: 1.2rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+table tr:hover {
+  background-color: #e0ffff;
+}
