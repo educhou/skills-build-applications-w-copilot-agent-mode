@@ -18,7 +18,7 @@ SECRET_KEY = 'your-secret-key'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'zany-invention-5r64g6w669rc7v4-8000.app.github.dev']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
