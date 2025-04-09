@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Activities() {
   const [activities, setActivities] = useState([]);
 
+  // Updated fetch URL to use the codespace URL
   useEffect(() => {
     fetch('https://zany-invention-5r64g6w669rc7v4-8000.app.github.dev/api/activities/')
       .then(response => response.json())

@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Users() {
+  const [users, setUsers] = useState([]);
+
+  // Added fetch logic to retrieve users data from the codespace API
+  useEffect(() => {
+    fetch('https://zany-invention-5r64g6w669rc7v4-8000.app.github.dev/api/users/')
+      .then(response => response.json())
+      .then(data => setUsers(data))
+      .catch(error => console.error('Error fetching users:', error));
+  }, []);
+
   return (
     <div className="card">
       <div className="card-body">
@@ -13,10 +23,12 @@ function Users() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>JaneDoe</td>
-              <td>jane.doe@example.com</td>
-            </tr>
+            {users.map(user => (
+              <tr key={user.id}>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
